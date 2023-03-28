@@ -1,0 +1,19 @@
+name: Create New File
+
+on:
+  workflow_dispatch
+
+jobs:
+  create_file:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+    - name: Create New File
+      run: |
+        echo "Hello World" > new_file.txt
+        git config --global user.email "santhosh.murugesan.anywhere.co"
+        git config --global user.name "santhosh"
+        git add .
+        git commit -m "Add new_file.txt"
+        git push
