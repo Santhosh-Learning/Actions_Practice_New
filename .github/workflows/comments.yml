@@ -1,0 +1,14 @@
+name: Say Hello during discussion
+
+on:
+  discussion:
+    types: [created, edited, answered]
+  discussion_comment:
+    types: [created, edited, deleted]
+
+jobs:
+  Notification:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Say Hello
+      run: echo "Hello"
