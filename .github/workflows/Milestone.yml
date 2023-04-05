@@ -1,0 +1,12 @@
+name: Say Hello during milestone action
+
+on:
+  milestone:
+    types: [created, opened, edited, deleted]
+
+jobs:
+  Notification:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Say Hello milestion action occurs
+      run: echo "Hello"
