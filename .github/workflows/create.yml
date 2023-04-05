@@ -1,0 +1,11 @@
+name: Say Hello during new creation
+
+on:
+  create
+
+jobs:
+  Say Hello:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Say Hello during new tag or branch creation
+      run: echo "Hello"
