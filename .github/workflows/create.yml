@@ -1,11 +1,12 @@
-name: Say Hello during new creation
+name: Say Hello during creation or deletion
 
 on:
-  create
+  - create
+  - delete
 
 jobs:
   Say Hello:
     runs-on: ubuntu-latest
     steps:
-    - name: Say Hello during new tag or branch creation
+    - name: Say Hello during new tag or branch creation or deletion
       run: echo "Hello"
