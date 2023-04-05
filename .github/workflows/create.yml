@@ -5,7 +5,7 @@ on:
   - delete
 
 jobs:
-  Say Hello:
+  Notification:
     runs-on: ubuntu-latest
     steps:
     - name: Say Hello during new tag or branch creation or deletion
