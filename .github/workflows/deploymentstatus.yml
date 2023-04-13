@@ -1,0 +1,17 @@
+name: Deploy to production
+
+on:
+  deployment_status:
+    types: [success]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify team
+        uses: ahmadawais/send-email-action@v2
+        with:
+          to: santhoshbabyrani16@gmail.com
+          subject: Deployment success
+          message: |
+            Deployment to production success.
