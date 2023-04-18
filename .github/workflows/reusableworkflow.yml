@@ -1,0 +1,11 @@
+name: Reusable Workflow
+
+on:
+  workflow_call
+
+jobs:
+  Resuable_Worflow_test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Say Hello during when reusable workflow is called
+      run: echo "Hello"
