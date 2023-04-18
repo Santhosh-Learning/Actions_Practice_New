@@ -10,4 +10,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Say Hello during when reusable workflow is called
-        uses: ./github/workflows/reusableworkflow.yml
+        uses: ./.github/workflows/reusableworkflow.yml
