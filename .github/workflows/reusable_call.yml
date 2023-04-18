@@ -7,5 +7,7 @@ jobs:
   Resuable_Worflow_Call:
     runs-on: ubuntu-latest
     steps:
-    - name: Say Hello during when reusable workflow is called
-      uses: ./github/workflows/reusableworkflow.yml
+        uses: actions/checkout@v2
+
+      - name: Say Hello during when reusable workflow is called
+        uses: ./github/workflows/reusableworkflow.yml
