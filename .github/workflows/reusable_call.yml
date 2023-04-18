@@ -5,8 +5,4 @@ on:
 
 jobs:
   ResuableWorkflowCall:
-    runs-on: ubuntu-latest
-    steps:
-
-      - name: Say Hello during when reusable workflow is called
         uses: ./.github/workflows/reusableworkflow.yml
