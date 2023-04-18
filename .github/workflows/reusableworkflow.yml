@@ -4,8 +4,10 @@ on:
   workflow_call
 
 jobs:
-  Resuable_Worflow_test:
+  ResuableWorflowtest:
     runs-on: ubuntu-latest
     steps:
-    - name: Say Hello during when reusable workflow is called
-      run: echo "Hello"
+      uses: actions/checkout@v2
+
+      - name: Say Hello during when reusable workflow is called
+        run: echo "Hello"

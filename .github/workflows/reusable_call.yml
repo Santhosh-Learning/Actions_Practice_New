@@ -4,10 +4,9 @@ on:
   workflow_dispatch
 
 jobs:
-  ResuableWorflowCall:
+  ResuableWorkflowCall:
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@v2
 
       - name: Say Hello during when reusable workflow is called
         uses: ./.github/workflows/reusableworkflow.yml
