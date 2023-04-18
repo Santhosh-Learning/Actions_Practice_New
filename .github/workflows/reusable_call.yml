@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Say Hello during when reusable workflow is called
-      run: echo "Hello"
+      uses: ./github/workflows/reusableworkflow.yml
