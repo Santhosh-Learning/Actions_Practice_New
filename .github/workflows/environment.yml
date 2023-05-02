@@ -1,0 +1,36 @@
+name: Learning Environments
+
+on:
+  workflow_dispatch
+
+jobs:
+  Dev:
+    runs-on: ubuntu-latest
+    environment: Dev
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run script in Dev environment
+        run: echo "I am running job in Dev environment"
+
+
+  Staging:
+    runs-on: ubuntu-latest
+    environment: Staging
+    needs: Dev
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run script in staging environment
+        run: echo "I am running job in staging environment"
+
+  Prod:
+    runs-on: ubuntu-latest
+    environment: Prod
+    needs: Staging
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Run script in prod environment
+        run: echo "I am running job in prod environment"
+      
