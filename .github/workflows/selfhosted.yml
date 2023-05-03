@@ -1,0 +1,13 @@
+name: Learning self-hosted runners
+
+on:
+  workflow_dispatch
+
+jobs:
+  Dev:
+    runs-on: self-hosted
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Run script in Dev environment
+        run: echo I am running job in Dev environment
