@@ -5,7 +5,7 @@ on:
 
 jobs:
   Dev:
-    runs-on: ubuntu-latest
+    runs-on: win11-laptop
     environment: Dev
     steps:
       - name: Checkout code
@@ -25,7 +25,7 @@ jobs:
         run: echo "I am running job in staging environment"
 
   Prod:
-    runs-on: ubuntu-latest
+    runs-on: win11-laptop
     environment: Prod
     needs: Staging
     steps:
