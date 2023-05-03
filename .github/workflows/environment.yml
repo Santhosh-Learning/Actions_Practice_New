@@ -5,7 +5,9 @@ on:
 
 jobs:
   Dev:
-    runs-on: win11-laptop
+    runs-on: 
+      runner-group: Default
+      runner-label: win11-laptop
     environment: Dev
     steps:
       - name: Checkout code
