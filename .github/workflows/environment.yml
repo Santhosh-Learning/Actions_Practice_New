@@ -6,8 +6,8 @@ on:
 jobs:
   Dev:
     runs-on: 
-      runner-group: Default
-      runner-label: win11-laptop
+      group: Default
+      labels: win11-laptop
     environment: Dev
     steps:
       - name: Checkout code
