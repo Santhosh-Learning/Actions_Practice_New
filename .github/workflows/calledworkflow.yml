@@ -6,6 +6,8 @@ on:
       my_variable:
         type: string
         description: 'A variable passed from the caller workflow'
+      num1:
+      num2:  
 
 jobs:
   build:
@@ -14,3 +16,11 @@ jobs:
       - name: Display variable value
         run: |
           echo "The value of the variable is ${{ inputs.my_variable }}"
+
+  ArithmeticOperations:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display arithmetic operation value
+        run: |
+          result=$(expr ${{ inputs.num1 }} + ${{ inputs.num2 }})
+          echo "The result is $result"
