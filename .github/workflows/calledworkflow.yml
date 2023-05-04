@@ -1,10 +1,10 @@
 name: My Reusable Workflow
 
-on: workflow_call
-
-inputs:
-  my_variable:
-    description: 'A variable passed from the caller workflow'
+on: 
+  workflow_call:
+    inputs:
+      my_variable:
+        description: 'A variable passed from the caller workflow'
 
 jobs:
   build:
