@@ -1,0 +1,14 @@
+name: Called Workflow to pass file values
+
+on:
+  workflow_call:
+    inputs:
+      file-name:
+        description: 'Name of the file to display'
+
+jobs:
+  display-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Display file content
+        run: cat ${{ github.event.inputs.file-name }}
