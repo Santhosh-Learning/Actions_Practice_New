@@ -7,9 +7,11 @@ on:
         type: string
         description: 'A variable passed from the caller workflow'
       num1:
-        type: number
-      num2:  
-        type: number
+        description: 'The first number for the arithmetic operation'
+        required: true
+      num2:
+        description: 'The second number for the arithmetic operation'
+        required: true
 
 jobs:
   build:
