@@ -4,6 +4,7 @@ on:
   workflow_call:
     inputs:
       my_variable:
+        type: string
         description: 'A variable passed from the caller workflow'
 
 jobs:
