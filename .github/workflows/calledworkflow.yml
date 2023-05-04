@@ -35,7 +35,7 @@ jobs:
           result=$(expr ${{ inputs.num1 }} + ${{ inputs.num2 }})
           echo "The result is $result"
 
-  passing files:
+  Passingfiles:
     runs-on: ubuntu-latest
     steps:
       - name: Display values in new filename
