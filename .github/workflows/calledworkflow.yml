@@ -40,5 +40,5 @@ jobs:
     steps:
       - name: Display values in new filename
         run: |
-          cat ${FILENAME1} ${FILENAME2} > file.txt
-          cat file.txt
+          echo "$(cat ${FILENAME1} ${FILENAME2} > file.txt)"
+          echo "$(cat file.txt)"
