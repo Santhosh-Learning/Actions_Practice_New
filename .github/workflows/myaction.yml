@@ -1,0 +1,15 @@
+name: Using my own workflow for test
+
+on:
+  pull_request
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Checking my action
+        uses: santhosh162000/Actions-marketplace@main
+       
