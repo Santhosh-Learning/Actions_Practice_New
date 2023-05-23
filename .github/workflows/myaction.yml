@@ -1,0 +1,20 @@
+name: Using my own workflow for test
+
+on:
+  pull_request
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        iteration: [1, 2, 3, 4, 5]
+        
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Checking my action
+        uses: santhosh162000/Actions-marketplace@main
+       
